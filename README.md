@@ -1,3 +1,3 @@
 # Movie-sort
 
-You can view it live here https://abdmoviesort.netlify.app/
+You can view it live here https://starwarspro.netlify.app/
