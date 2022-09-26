@@ -5,7 +5,6 @@ import logo from "../asset/img/Star_Wars_Logo.png";
 import { Link } from "react-router-dom";
 
 const Movie = ({ movie }) => {
-
   const { url, title, release_date } = movie;
 
   const splitUrl = url.split("/")[5];

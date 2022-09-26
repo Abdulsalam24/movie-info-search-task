@@ -30,7 +30,7 @@ function Movie() {
       setHeight(Math.floor(heightSum));
     }
   }, [filtered]);
-  
+
   let feet = Math.floor(height / 12);
   let inch = Math.floor(height / 2.54);
 

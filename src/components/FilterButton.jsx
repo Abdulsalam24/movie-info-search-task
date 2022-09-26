@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
 
 const FilterButton = ({ setFiltered, characters, setGender, gender }) => {
-  
   useEffect(() => {
     if (gender === "male") {
-      const filteredMale = characters.filter((movie) => movie.gender === gender);
+      const filteredMale = characters.filter(
+        (movie) => movie.gender === gender
+      );
       setFiltered(filteredMale);
       return;
     } else if (gender === "female") {
-      const filteredFemale = characters.filter((movie) => movie.gender === gender);
+      const filteredFemale = characters.filter(
+        (movie) => movie.gender === gender
+      );
       setFiltered(filteredFemale);
       return;
     }
