@@ -25,10 +25,14 @@ function Movie() {
     if (char.length > 0) {
       const heightSum =
         filtered &&
-        filtered.map((char) => Number(char.height)).reduce((a, b) => a + b);
-      setHeight(heightSum);
+        filtered.map((char) => Number(char.height)).reduce((a, b) => a + b) *
+          2.54;
+      setHeight(Math.floor(heightSum));
     }
   }, [filtered]);
+  
+  let feet = Math.floor(height / 12);
+  let inch = Math.floor(height / 2.54);
 
   const handleSort = () => {
     if (!sorted) {
@@ -100,7 +104,7 @@ function Movie() {
               <th>Total </th>
               <th>number {filtered.length}</th>
               <th>
-                height : <br /> {height ? height : 0} cm (5ft/6.93in)
+                height : <br /> {height ? height : 0}cm ({feet}ft/{inch}in)
               </th>
             </tr>
           </thead>
